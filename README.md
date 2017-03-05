@@ -1,7 +1,7 @@
 #Angular2 ToDo Learning Exercise
 
 ##Description
-This is just a small exercise to learn more about Angular2.
+This is just a small exercise to learn more about Angular2 and angular-cli. Here's a working example:
 
 ##Functions
 So far the app can do following things:
