@@ -1,0 +1,25 @@
+<section class="todoapp">
+    <header class="header">
+        <h1 class="highlight">{{ title }}<span class="highlight-inversed"><strong>{{todos.length}}</strong></span></h1>
+        <input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()" required>
+        <span *ngIf="showError" class="error">{{ errorMsg }}</span>
+    </header>
+    <section class="main" *ngIf="todos.length > 0">
+        <ul class="todo-list">
+            <li *ngFor="let todo of todos" [class.completed]="todo.complete">
+                <div class="view">
+                    <span class="highlight">{{todo.id}}</span>
+                    <input id="todo{{todo.id}}" class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
+                    <label for="todo{{todo.id}}">{{todo.title}}</label>
+                    <button class="delete" (click)="removeTodo(todo)"></button>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section *ngIf="todos.length === 0">
+        <h2 class="highlight2">No Todos ...</h2>
+    </section>
+    <footer class="footer">
+        <span>Created for learning purpose</span>
+    </footer>
+</section>

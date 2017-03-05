@@ -1,0 +1,137 @@
+input {
+    border-color: #cccccc;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 3px solid #CCC;
+    font-style: italic;
+}
+
+input:focus {
+    border-color: deepskyblue;
+    outline: none;
+}
+
+input[type=checkbox] {
+    border: 3px solid #CCC;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding: 5px;
+    content: ' ';
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    cursor: pointer;
+}
+
+input[type='checkbox']:hover,
+input[type='radio']:hover {
+    background: #ccc;
+}
+
+input[type='checkbox']:checked,
+input[type='radio']:checked {
+    background: deepskyblue;
+}
+
+.todo-list li .delete {
+    display: none;
+    float: right;
+    position: relative;
+    top: 4px;
+    bottom: 0;
+    margin: auto 0;
+    color: #CCC;
+    border: none;
+    background: transparent;
+    transition: color 0.2s ease-out;
+}
+
+.todo-list li .delete:hover {
+    color: deeppink;
+}
+
+.todo-list li .delete:after {
+    cursor: pointer;
+    content: 'delete';
+}
+
+.todo-list li:hover .delete {
+    display: block;
+    float: right;
+}
+
+.todo-list li.completed label {
+    color: #d9d9d9;
+    text-decoration: line-through;
+}
+
+.todoapp {
+    padding: 10px;
+}
+
+.new-todo {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.highlight {
+    color: deepskyblue !important;
+    background-color: black;
+    display: inline-block;
+    padding: 5px;
+}
+
+.highlight-inversed {
+    color: black !important;
+    background-color: deepskyblue;
+    display: inline-block;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.highlight2 {
+    color: gray;
+    font-style: italic;
+    text-align: center;
+    font-size: 3em;
+}
+
+.error {
+    max-width: 50%;
+    color: deeppink;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+    border: 1px solid deeppink;
+    padding: 5px;
+}
+
+.main,
+.footer {
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.footer {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding: 5px;
+    border-bottom: 2px solid #ccc;
+    opacity: 0.6;
+    background-color: whitesmoke;
+}
+
+li:hover {
+    opacity: 1;
+}
